@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jobqueue-sqlite"
+version = "0.1.0"
+description = "A background job queue that keeps everything in one SQLite file"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [{ name = "jesuswork60-create" }]
+dependencies = []
+
+[project.scripts]
+jobqueue = "jobqueue.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
