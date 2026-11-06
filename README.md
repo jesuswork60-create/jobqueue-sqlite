@@ -2,7 +2,7 @@
 
 A persistent background job queue that keeps everything in one SQLite file. There is no broker and no server to run: your program writes jobs into the database, and one or more worker processes on the same machine pick them up. It needs Python 3.11 or newer and has no dependencies outside the standard library.
 
-It covers the parts a small queue tends to need sooner or later:
+*It covers the parts a small queue tends to need sooner or later:*
 
 - Jobs have a queue name, a priority, a run time and a JSON payload.
 - Workers hold a lease on a job. If a worker dies, the lease expires and the job goes back in the queue.
